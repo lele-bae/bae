@@ -1,0 +1,54 @@
+body {
+    background-color: pink;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+#image-container {
+    margin: 20px 0;
+}
+
+#image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+#interactive-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #ff69b4;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+#interactive-button:hover {
+    background-color: #ff1493;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+.bounce {
+    animation: bounce 1s;
+}
