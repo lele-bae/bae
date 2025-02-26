@@ -12,6 +12,14 @@ body {
     text-align: center;
 }
 
+.relative-image {
+    width: 300px;
+    height: auto;
+    position: relative;
+    top: 20px; /* 向下移动 20px */
+    left: 50px; /* 向右移动 50px */
+}
+
 #image-container {
     margin: 20px 0;
 }
@@ -51,4 +59,37 @@ body {
 
 .bounce {
     animation: bounce 1s;
+}
+
+/* 按钮基础样式 */
+.jump-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease; /* 添加过渡效果 */
+}
+
+.jump-button:hover {
+    background-color: #0056b3;
+}
+
+/* 跳动动画 */
+@keyframes jump {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px); /* 向上跳动 */
+    }
+}
+
+/* 应用动画 */
+.button.jump {
+    animation: jump 0.5s ease; /* 跳动动画 */
 }
