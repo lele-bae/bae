@@ -1,20 +1,27 @@
-document.getElementById('interactive-button').addEventListener('click', function() {
-    this.classList.add('bounce');
+// 获取按钮元素
+const button1 = document.getElementById('button1');
+const button2 = document.getElementById('button2');
+
+// 按钮1点击事件
+button1.addEventListener('click', function() {
+    // 添加跳动动画
+    button1.classList.add('jump');
+    
+    // 动画结束后跳转页面
     setTimeout(() => {
-        this.classList.remove('bounce');
-    }, 1000);
+	button1.classList.remove('jump');
+        window.location.href = "pageA.html"; // 跳转到页面A
+    }, 500); // 500ms 是动画的持续时间
 });
 
-document.getElementById('image-upload').addEventListener('change', function(event) {
-    const file = event.target.files[0];
-    if (file) {
-        const reader = new FileReader();
-        reader.onload = function(e) {
-            const img = document.createElement('img');
-            img.src = e.target.result;
-            document.getElementById('image-container').innerHTML = '';
-            document.getElementById('image-container').appendChild(img);
-        };
-        reader.readAsDataURL(file);
-    }
+// 按钮2点击事件
+button2.addEventListener('click', function() {
+    // 添加跳动动画
+    button2.classList.add('jump');
+    
+    // 动画结束后跳转页面
+    setTimeout(() => {
+	button2.classList.remove('jump');
+        window.location.href = "pageB.html"; // 跳转到页面B
+    }, 500); // 500ms 是动画的持续时间
 });
